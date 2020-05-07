@@ -36,12 +36,10 @@ repositories {
 
 Following targets are available
 ```groovy
-sourceSets {
-    implementation "io.xorum:ReKamp:0.9.9"
-    implementation "io.xorum:ReKamp-jvm:0.9.9"
-    implementation "io.xorum:ReKamp-android:0.9.9"
-    implementation "io.xorum:ReKamp-iosX64:0.9.9"
-    implementation "io.xorum:ReKamp-iosArm32:0.9.9"
-    implementation "io.xorum:ReKamp-iosArm64:0.9.9"
-}
+implementation "io.xorum:ReKamp:0.9.9"
+implementation "io.xorum:ReKamp-jvm:0.9.9"
+implementation "io.xorum:ReKamp-android:0.9.9"
+implementation "io.xorum:ReKamp-iosX64:0.9.9"
+implementation "io.xorum:ReKamp-iosArm32:0.9.9"
+implementation "io.xorum:ReKamp-iosArm64:0.9.9"
 ```
