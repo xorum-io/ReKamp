@@ -1,0 +1,2 @@
+rootProject.name = 'ReKamp'
+enableFeaturePreview('GRADLE_METADATA')

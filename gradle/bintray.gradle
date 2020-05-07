@@ -1,0 +1,29 @@
+bintray {
+    user = 'yevhenii-kanivets'
+    key = '10c4db9fc07405b53decc8db143efeda1b1c3085'
+    publish = true
+    override = true
+
+    pkg {
+        userOrg = 'xorum-io'
+        repo = 'ReKamp'
+        name = project.bintray_name
+        licenses = ['Apache-2.0']
+        publications = ['mavenProject']
+
+        version {
+            name = project.version
+            released = new Date()
+            vcsTag = project.version
+
+            gpg {
+                sign = true
+                passphrase = System.getenv('BINTRAY_PASSPHRASE')
+            }
+        }
+    }
+}
+
+bintrayUpload.doFirst {
+    publications = project.publishing.publications
+}
