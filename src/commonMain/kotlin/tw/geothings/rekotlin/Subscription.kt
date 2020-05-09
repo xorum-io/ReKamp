@@ -39,17 +39,6 @@ class SubscriptionBox<State, SelectedState: Any>(val originalSubscription: Subsc
                              transformedSubscription: Subscription<SelectedState>?,
                              val subscriber: StoreSubscriber<SelectedState>) where State: StateType {
 
-    // hoping to mimic swift weak reference
-    // however this doesn't really work the same way, gc collects non-deterministically
-    // setting the original subscriber to null will not result in this being nulled synchronously
-    /*
-    var _subscriber: WeakReference<StoreSubscriber<SelectedState>> = WeakReference(subscriber)
-    val subscriber: StoreSubscriber<SelectedState>?
-        get() {
-            return _subscriber.get()
-        }
-    */
-
     init {
         // If we haven't received a transformed subscription, we forward all values
         // from the original subscription.
@@ -60,7 +49,7 @@ class SubscriptionBox<State, SelectedState: Any>(val originalSubscription: Subsc
             originalSubscription.observe { _, newState ->
                 @Suppress("UNCHECKED_CAST")
                 (newState as? SelectedState)?.let {
-                    this.subscriber.newState(it)
+                    this.subscriber.onNewState(it)
                 }
             }
         }
@@ -69,7 +58,7 @@ class SubscriptionBox<State, SelectedState: Any>(val originalSubscription: Subsc
         // and forward all new values to the subscriber.
         transformedSubscription?.let {
             transformedSubscription.observe { _, newState ->
-                this.subscriber.newState(newState)
+                this.subscriber.onNewState(newState)
             }
 
         } ?: forwardFromOriginalSubscription()
@@ -92,8 +81,6 @@ class Subscription<State: Any> {
             }
         }
     }
-
-    // region: Public interface
 
     /**
      * Provides a subscription that selects a substate of the state of the original subscription.
@@ -154,9 +141,6 @@ class Subscription<State: Any> {
         }
     }
 
-    // endregion
-
-    // region: Internals
     var observer: ((State?, State) -> Unit)? = null
 
     init {}
@@ -185,6 +169,4 @@ class Subscription<State: Any> {
     internal fun observe(observer: (State?, State) -> Unit){
         this.observer = observer
     }
-
-    // endregion
 }

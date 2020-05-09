@@ -24,5 +24,4 @@ package tw.geothings.rekotlin
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-interface StateType {}
-
+interface StateType

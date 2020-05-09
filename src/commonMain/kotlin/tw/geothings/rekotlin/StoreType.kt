@@ -62,7 +62,10 @@ interface StoreType<State: StateType>: DispatchingStoreType {
      * transformed subscription. Subscriptions can be transformed to only select a subset of the
      * state, or to skip certain state updates.
      */
-    fun <SelectedState: Any, S: StoreSubscriber<SelectedState>> subscribe(subscriber: S, transform: ((Subscription<State>) -> Subscription<SelectedState>)?)
+    fun <SelectedState: Any, S: StoreSubscriber<SelectedState>> subscribe(
+            subscriber: S,
+            transform: ((Subscription<State>) -> Subscription<SelectedState>)?
+    )
 
     /**
      * Unsubscribes the provided subscriber. The subscriber will no longer
