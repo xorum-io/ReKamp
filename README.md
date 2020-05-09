@@ -43,3 +43,5 @@ implementation "io.xorum:ReKamp-iosX64:1.0.0"
 implementation "io.xorum:ReKamp-iosArm32:1.0.0"
 implementation "io.xorum:ReKamp-iosArm64:1.0.0"
 ```
+
+Example of usage can be found here: https://github.com/xorum-io/codeforces_watcher/blob/dev/common/build.gradle
