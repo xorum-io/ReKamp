@@ -1,7 +1,7 @@
 ## ReKotlin
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md)
-[ ![Download](https://api.bintray.com/packages/xorum-io/ReKamp/ReKamp/images/download.svg?version=0.9.9) ](https://bintray.com/xorum-io/ReKamp/ReKamp/0.9.9/link)
+[ ![Download](https://api.bintray.com/packages/xorum-io/ReKamp/ReKamp/images/download.svg?version=1.0.0) ](https://bintray.com/xorum-io/ReKamp/ReKamp/1.0.0/link)
 
 Port of [ReKotlin](https://github.com/ReKotlin/ReKotlin) to Kotlin Multiplatform, which corresponds to [ReKotlin/1.0.4](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.4). Supports **JVM**, **Android**, **iOS**.
 
@@ -36,10 +36,12 @@ repositories {
 
 Following targets are available
 ```groovy
-implementation "io.xorum:ReKamp:0.9.9"
-implementation "io.xorum:ReKamp-jvm:0.9.9"
-implementation "io.xorum:ReKamp-android:0.9.9"
-implementation "io.xorum:ReKamp-iosX64:0.9.9"
-implementation "io.xorum:ReKamp-iosArm32:0.9.9"
-implementation "io.xorum:ReKamp-iosArm64:0.9.9"
+implementation "io.xorum:ReKamp:1.0.0"
+implementation "io.xorum:ReKamp-jvm:1.0.0"
+implementation "io.xorum:ReKamp-android:1.0.0"
+implementation "io.xorum:ReKamp-iosX64:1.0.0"
+implementation "io.xorum:ReKamp-iosArm32:1.0.0"
+implementation "io.xorum:ReKamp-iosArm64:1.0.0"
 ```
+
+Example of usage can be found here: https://github.com/xorum-io/codeforces_watcher/blob/dev/common/build.gradle

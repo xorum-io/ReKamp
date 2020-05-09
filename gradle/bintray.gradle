@@ -7,7 +7,7 @@ bintray {
     pkg {
         userOrg = 'xorum-io'
         repo = 'ReKamp'
-        name = project.bintray_name
+        name = project.bintrayName
         licenses = ['Apache-2.0']
         publications = ['mavenProject']
 
