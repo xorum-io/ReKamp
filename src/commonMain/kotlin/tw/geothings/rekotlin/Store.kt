@@ -80,7 +80,10 @@ class Store<State: StateType> (
         }
     }
 
-    override fun <SelectedState: Any, S: StoreSubscriber<SelectedState>> subscribe(subscriber: S, transform: ((Subscription<State>) -> Subscription<SelectedState>)?) {
+    override fun <SelectedState: Any, S: StoreSubscriber<SelectedState>> subscribe(
+            subscriber: S,
+            transform: ((Subscription<State>) -> Subscription<SelectedState>)?
+    ) {
         // If the same subscriber is already registered with the store, replace the existing
         // subscription with the new one.
         val index = this.subscriptions.indexOfFirst { it.subscriber == subscriber }
@@ -159,4 +162,8 @@ typealias DispatchCallback<State> = (State) -> Unit
 
 typealias ActionCreator<State, Store> = (state: State, store: Store) -> Action?
 
-typealias AsyncActionCreator<State, Store> = (state: State, store: Store, actionCreatorCallback: (ActionCreator<State, Store>) -> Unit) -> Unit
+typealias AsyncActionCreator<State, Store> = (
+        state: State,
+        store: Store,
+        actionCreatorCallback: (ActionCreator<State, Store>) -> Unit
+) -> Unit

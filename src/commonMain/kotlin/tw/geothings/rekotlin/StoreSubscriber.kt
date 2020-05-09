@@ -25,5 +25,6 @@ package tw.geothings.rekotlin
  */
 
 interface StoreSubscriber<StoreSubscriberStateType : Any> {
-    fun newState(state: StoreSubscriberStateType)
+
+    fun onNewState(state: StoreSubscriberStateType)
 }
