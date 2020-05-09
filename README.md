@@ -1,4 +1,4 @@
-## ReKotlin
+## ReKamp
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md)
 [ ![Download](https://api.bintray.com/packages/xorum-io/ReKamp/ReKamp/images/download.svg?version=1.0.0) ](https://bintray.com/xorum-io/ReKamp/ReKamp/1.0.0/link)
