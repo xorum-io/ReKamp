@@ -1,13 +1,13 @@
 ## ReKamp
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md)
-[ ![Download](https://api.bintray.com/packages/xorum-io/ReKamp/ReKamp/images/download.svg?version=1.0.4) ](https://bintray.com/xorum-io/ReKamp/ReKamp/1.0.4/link)
+[ ![Download](https://api.bintray.com/packages/xorum-io/ReKamp/ReKamp/images/download.svg?version=1.0.5) ](https://bintray.com/xorum-io/ReKamp/ReKamp/1.0.5/link)
 
-Port of [ReKotlin](https://github.com/ReKotlin/ReKotlin) to Kotlin Multiplatform, which corresponds to [ReKotlin/1.0.4](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.4). Supports **JVM**, **Android**, **iOS**.
+Port of [ReKotlin](https://github.com/ReKotlin/ReKotlin) to Kotlin Multiplatform, which corresponds to [ReKotlin/1.0.5](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.5). Supports **JVM**, **Android**, **iOS**.
 
 ## Introduction
 
-This is an almost exact copy of [ReKotlin/1.0.4](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.4) with a few changes to source code and Gradle scripts to support Kotlin Multiplatform.
+This is an almost exact copy of [ReKotlin/1.0.5](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.5) with a few changes to source code and Gradle scripts to support Kotlin Multiplatform.
 
 See official [ReKotlin](https://github.com/ReKotlin/ReKotlin) documentation for examples of usage in JVM / Android projects. Nothing has changed on these platforms. For usage in iOS projects, see the next section.
 
@@ -36,12 +36,12 @@ repositories {
 
 Following targets are available
 ```groovy
-implementation "io.xorum:ReKamp:1.0.4"
-implementation "io.xorum:ReKamp-jvm:1.0.4"
-implementation "io.xorum:ReKamp-android:1.0.4"
-implementation "io.xorum:ReKamp-iosX64:1.0.4"
-implementation "io.xorum:ReKamp-iosArm32:1.0.4"
-implementation "io.xorum:ReKamp-iosArm64:1.0.4"
+implementation "io.xorum:ReKamp:1.0.5"
+implementation "io.xorum:ReKamp-jvm:1.0.5"
+implementation "io.xorum:ReKamp-android:1.0.5"
+implementation "io.xorum:ReKamp-iosX64:1.0.5"
+implementation "io.xorum:ReKamp-iosArm32:1.0.5"
+implementation "io.xorum:ReKamp-iosArm64:1.0.5"
 ```
 
 Example of usage can be found here: https://github.com/xorum-io/codeforces_watcher/blob/dev/common/build.gradle
