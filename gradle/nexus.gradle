@@ -1,0 +1,20 @@
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl = uri("https://s01.oss.sonatype.org/service/local/")
+            snapshotRepositoryUrl = uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+            username = properties.getProperty('ossrhUser')
+            password = properties.getProperty('ossrhPassword')
+        }
+    }
+}
+
+signing {
+    def signingKey = properties.getProperty("signingKey")
+    def signingPassword = properties.getProperty("signingPassword")
+    useInMemoryPgpKeys(signingKey, signingPassword)
+    sign(publishing.publications)
+}

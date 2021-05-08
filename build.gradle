@@ -2,13 +2,13 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        jcenter()
         mavenLocal()
+        gradlePluginPortal()
     }
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.android.tools.build:gradle:$gradle_android_version"
-        classpath "com.jfrog.bintray.gradle:gradle-bintray-plugin:$bintray_plugin_version"
+        classpath "io.github.gradle-nexus:publish-plugin:$nexus_plugin_version"
     }
 }
 
@@ -22,7 +22,8 @@ repositories {
 apply plugin: 'kotlin-multiplatform'
 apply plugin: 'maven-publish'
 apply plugin: 'com.android.library'
-apply plugin: 'com.jfrog.bintray'
+apply plugin: 'io.github.gradle-nexus.publish-plugin'
+apply plugin: 'signing'
 
 android {
     compileSdkVersion 29
@@ -107,16 +108,6 @@ afterEvaluate {
     }
 }
 
-bintrayUpload.doFirst {
-    publications = publishing.publications.collect {
-        it.name
-    }.findAll {
-        it != "kotlinMultiplatform"
-    }
-}
-
-bintrayUpload.dependsOn publishToMavenLocal
-
 apply from: rootProject.file('pom.gradle')
-apply from: rootProject.file('gradle/bintray.gradle')
 apply from: rootProject.file('gradle/publish.gradle')
+apply from: rootProject.file('gradle/nexus.gradle')

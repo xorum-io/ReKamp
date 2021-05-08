@@ -1,17 +1,15 @@
+task javadocJar(type: Jar) {
+    classifier "javadoc"
+}
+
 publishing {
-    repositories {
-        maven {
-            url  = 'https://dl.bintray.com/xorum-io/ReKamp'
-        }
-    }
+    publications.withType(MavenPublication) {
+        groupId project.group
+        artifactId project.name
+        version project.version
 
-    publications {
-        mavenProject(MavenPublication) {
-            groupId project.group
-            artifactId project.name
-            version project.version
+        withPom(pom)
 
-            withPom(pom)
-        }
+        artifact(javadocJar)
     }
 }
