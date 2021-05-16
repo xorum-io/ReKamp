@@ -2,11 +2,11 @@
 
 [![License MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/ReSwift/ReSwift/blob/master/LICENSE.md)
 
-Port of [ReKotlin](https://github.com/ReKotlin/ReKotlin) to Kotlin Multiplatform, which corresponds to [ReKotlin/1.0.5](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.5). Supports **JVM**, **Android**, **iOS**.
+Port of [ReKotlin](https://github.com/ReKotlin/ReKotlin) to Kotlin Multiplatform, which corresponds to [ReKotlin/1.0.4](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.4). Supports **JVM**, **Android**, **iOS**.
 
 ## Introduction
 
-This is an almost exact copy of [ReKotlin/1.0.5](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.5) with a few changes to source code and Gradle scripts to support Kotlin Multiplatform.
+This is an almost exact copy of [ReKotlin/1.0.4](https://github.com/ReKotlin/ReKotlin/releases/tag/1.0.4) with a few changes to source code and Gradle scripts to support Kotlin Multiplatform.
 
 See official [ReKotlin](https://github.com/ReKotlin/ReKotlin) documentation for examples of usage in JVM / Android projects. Nothing has changed on these platforms. For usage in iOS projects, see the next section.
 
