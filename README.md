@@ -35,7 +35,7 @@ repositories {
 
 Simply add following in your `commonMain` source set
 ```groovy
-implementation "io.xorum:ReKamp-kotlinMultiplatform:1.0.6"
+implementation "io.xorum:ReKamp-kotlinMultiplatform:1.0.7"
 ```
 
 Example of usage can be found here: https://github.com/xorum-io/codeforces_watcher/blob/dev/common/build.gradle
